@@ -1,0 +1,164 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.ttf); }
+body {
+  font-family: "Montserrat", arial; }
+
+button:active, button:focus {
+  outline: none !important;
+  outline-offset: 0 !important; }
+
+.form-control:focus {
+  outline: none !important;
+  outline-offset: 0 !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #e08b04; }
+
+.component-uppermenu {
+  background-color: #ffffff;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #dddddd;
+  max-height: 56px; }
+  .component-uppermenu .container {
+    position: relative;
+    padding-right: 0;
+    padding-left: 0; }
+    .component-uppermenu .container ul {
+      float: right;
+      margin-bottom: 0; }
+      .component-uppermenu .container ul li {
+        display: inline; }
+        .component-uppermenu .container ul li a {
+          color: #1A1A1A;
+          float: left;
+          text-align: right;
+          font-size: 13px;
+          margin-left: 20px;
+          padding: 5px;
+          cursor: pointer;
+          -webkit-user-select: none;
+          /* Chrome/Safari */
+          -moz-user-select: none;
+          /* Firefox */
+          -ms-user-select: none;
+          /* IE10+ */
+          -o-user-select: none;
+          user-select: none; }
+        .component-uppermenu .container ul li a:hover {
+          text-decoration: none;
+          color: #a93131; }
+        .component-uppermenu .container ul li a:focus {
+          text-decoration: none; }
+        .component-uppermenu .container ul li .explore {
+          background: #a93131;
+          color: #ffffff;
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          -ms-border-radius: 4px;
+          border-radius: 4px; }
+        .component-uppermenu .container ul li .explore:hover {
+          color: #eeeeee; }
+        .component-uppermenu .container ul li i {
+          margin-right: 3px; }
+    @media (max-width: 768px) {
+      .component-uppermenu .container ul {
+        display: none; } }
+    .component-uppermenu .container .navbar-toggle {
+      background-color: #ffffff;
+      border: 1px solid #eeeeee;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      border-radius: 0; }
+      .component-uppermenu .container .navbar-toggle .icon-bar {
+        background-color: #dddddd; }
+    @media (min-width: 768px) {
+      .component-uppermenu .container .navbar {
+        display: none; } }
+    .component-uppermenu .container .login-form {
+      position: absolute;
+      top: 39px;
+      right: 0;
+      max-width: 320px;
+      background-color: #ffffff;
+      padding: 10px 0 10px 5px;
+      text-transform: none;
+      transition: all linear 0.1s; }
+      .component-uppermenu .container .login-form .login-error-report {
+        float: left;
+        width: 100%;
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+        padding: 5px;
+        text-align: center; }
+      .component-uppermenu .container .login-form div[class^="col-"] {
+        padding-left: 0;
+        padding-right: 0; }
+      .component-uppermenu .container .login-form input {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0;
+        margin-bottom: 5px; }
+      .component-uppermenu .container .login-form button {
+        width: 100%;
+        background-color: #f39c12;
+        border-color: #f39c12;
+        color: #ffffff;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0; }
+      .component-uppermenu .container .login-form button:hover {
+        background-color: #e08b04;
+        border-color: #e08b04; }
+    .component-uppermenu .container .ng-hide {
+      right: -200px; }
+
+.component-logo {
+  background-color: #ffffff;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center; }
+  .component-logo .logo-recipe {
+    margin-top: 40px;
+    margin-bottom: 20px; }
+    .component-logo .logo-recipe img {
+      width: 100%;
+      max-width: 500px; }
+  .component-logo span {
+    font-size: 20px;
+    color: #a93131; }
+
+.component-sociallogin {
+  background-color: #ffffff;
+  padding-bottom: 10px;
+  padding-top: 10px; }
+  .component-sociallogin .row .fb {
+    text-align: right; }
+  .component-sociallogin .row .gg {
+    text-align: left; }
+  .component-sociallogin .row .button-recipe button {
+    background-color: #f39c12;
+    border-color: #f39c12;
+    color: #1A1A1A;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    padding: 10px; }
+  .component-sociallogin .row .button-recipe button:hover {
+    background-color: #e08b04;
+    border-color: #e08b04; }
+  @media (max-width: 768px) {
+    .component-sociallogin .row .fb, .component-sociallogin .row .gg {
+      text-align: center; }
+      .component-sociallogin .row .fb button, .component-sociallogin .row .gg button {
+        width: 60%; }
+    .component-sociallogin .row .gg {
+      margin-top: 10px; } }
+
+/*# sourceMappingURL=home.css.map */

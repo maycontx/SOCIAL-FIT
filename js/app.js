@@ -1,0 +1,1 @@
+angular.module("fit", ["ngAnimate", "ngRoute"]);

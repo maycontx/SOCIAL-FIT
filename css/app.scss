@@ -1,0 +1,83 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+// VARS
+$app-font: "Montserrat", arial;
+
+$primary-color: #ffffff;
+$secondary-color: #a93131;
+$tertiary-color: #f39c12;
+$black-color: #1a1a1a;
+
+$fb-color: #3a5795; 
+
+
+body{
+	font-family: $app-font;
+}
+
+a{
+	color: $black-color !important;
+	text-decoration: none;
+}
+
+a:hover, a:focus, a:active{
+	text-decoration: none;
+	color: $secondary-color !important;
+}
+
+button:active, button:focus{				
+	outline: none !important; 
+    outline-offset: 0 !important;
+}
+
+.form-control:focus{
+	outline: none !important; 
+    outline-offset: 0 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #e08b04;
+}
+
+// MIXINS
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin component-settings($background-color) {
+  	background-color: $background-color;		 
+	  padding-bottom: 10px;
+	     padding-top: 10px;
+}
+
+@mixin button($font-color){	
+	background-color: $tertiary-color;
+	border-color: $tertiary-color;
+	color: $font-color;
+	@include border-radius(0);
+}
+
+@mixin button-hover(){
+	background-color: #e08b04;
+	border-color: #e08b04;
+}
+
+@mixin component-alert-danger(){
+	color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+@mixin component-unselectable(){
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */	
+	-o-user-select: none;
+	user-select: none;
+}
+

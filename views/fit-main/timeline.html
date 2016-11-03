@@ -1,0 +1,89 @@
+<div class="main-menu">
+	<div class="logo">
+		<img src="img/root/smart-logo.png" />
+	</div>
+	<div class="menu">
+		<div class="menu-title">Perfil<a>Editar</a></div>
+		<div class="menu-item"><i class="fa fa-newspaper-o"></i> Novidades<span class="badge">10</span></div>
+		<div class="menu-item"><i class="fa fa-commenting"></i> Mensagens<span class="badge">4</span></div>
+		<div class="menu-item"><i class="fa fa-briefcase"></i> Consultorias<span class="badge">3</span></div>
+		<div class="menu-item"><i class="fa fa-photo"></i> Fotos</div>
+		<div class="menu-item"><i class="fa fa-send"></i> Seguidores<span class="badge">17000</span></div>
+		<div class="menu-title">Grupos<a>Criar</a></div>
+		<div class="menu-item">Treino Mestre<span class="badge">99+</span></div>
+		<div class="menu-title">Eventos<a>Criar</a></div>
+		<div class="menu-item">Arnold Classic 2017<span class="badge">99+</span></div>
+	</div>
+</div>
+<div class="timeline">		
+	<div class="postform">
+		<form>
+			<div class="media-box">
+				<ul>
+					<li>
+						<a>
+							<i class="fa fa-camera-retro" aria-hidden="true"></i>
+							<span>Foto/Imagem</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<i class="fa fa-video-camera" aria-hidden="true"></i>
+							<span>Vídeo</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<i class="fa fa-external-link" aria-hidden="true"></i>
+							<span>Link</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="url-box">
+				<input type="text" class="form-control" placeholder="Url do link" ng-model="linkUrl">
+				<button type="button" class="btn btn-primary btn-link-find" ng-click="find()">Encontrar</button>
+			</div>
+			<div class="text-box">
+				<textarea ng-model="post.text" timeline-textarea class="form-control" rows="{{timelineTextareaRow}}" placeholder="Escreva algo motivador..."></textarea>
+			</div>
+			<div class="btn-box">
+				<button class="btn btn-primary">Publicar</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="post" ng-repeat="post in timelinePosts">
+		<div class="post-header">
+			<div class="post-header-img">
+				<img src="">
+			</div>
+			<div class="post-header-info">
+				<div class="post-author">
+					<a>{{post.user.name + " " + post.user.aftername}}</a> 
+					publicou
+				</div>
+				<div class="post-date">
+					{{post.date}}
+				</div>
+			</div>
+		</div>
+		<div class="post-content">
+			{{post.text}}
+		</div>
+		<div class="post-footer">
+			<div class="post-footer-item">
+				<i class="glyphicon glyphicon-heart"></i>
+				Curtir
+			</div>
+			<div class="post-footer-item">
+				<i class="glyphicon glyphicon-bullhorn"></i>
+				Comentar
+			</div>
+			<div class="post-footer-item">
+				<i class="glyphicon glyphicon-send"></i>
+				Compartilhar
+			</div>
+		</div>
+	</div>
+</div>

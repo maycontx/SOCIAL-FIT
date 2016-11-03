@@ -1,0 +1,216 @@
+@import 'app.scss';
+
+$menu-size: 220px;
+
+.main-menu{
+	position: 	fixed;
+	top: 		0;
+	left: 		0;
+	height: 	100%;	
+	width: 		$menu-size;
+	border-right: 1px solid #eeeeee;
+	background-color: #ffffff;	
+
+	.logo{
+		padding: 10px;
+		text-align: center;		
+		img{
+			width: 100%;
+			max-width: 80px;
+		}
+
+	}
+
+	.menu{
+		color: #000;
+		.menu-title{				   
+		    text-transform: uppercase;
+		    letter-spacing: 1px;
+		    font-size: 10px;
+		    padding-left: 5px;
+		    margin-top: 20px;
+		    padding-bottom: 5px;
+		    border-bottom: 1px solid #eeeeee;
+
+		    a{
+		    	float: right;
+		    	padding-right: 5px;
+		    	color: $black-color;
+		    	@include component-unselectable();
+		    	cursor: pointer;
+		    }
+		    a:hover{
+				color: $secondary-color;
+		    }
+		}
+		.menu-item{			
+		    padding: 10px; 
+		    cursor: pointer;
+		    font-size: 12px;
+		    @include component-unselectable();
+		    span{
+				float: right;
+				background-color: #eee;				
+				color: $black-color;
+		    }
+		}
+		.menu-item:hover{
+			background-color: #eee;
+		}
+	}
+
+}
+
+.timeline{
+	float: left;
+	padding-top: 20px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: $menu-size + 10;
+	width: 510px;
+
+	.postform{
+		float: left;
+		width: 100%;		
+		border: 1px solid #f1e5d1;
+		margin-bottom: 30px;
+		@include border-radius(5px);
+		padding: 5px;
+
+		.media-box{
+			padding: 5px;
+			ul{
+				padding-left: 0;
+				li{
+					margin-right: 10px;
+					display: inline;
+					a{
+						cursor: pointer;
+						i{
+
+						}
+						span{
+
+						}
+					}					
+				}
+			}
+		}
+
+		.url-box{
+			margin-bottom: 10px;
+			position: relative;
+			input{				
+				@include border-radius(0);
+				border: none;
+			    border-bottom: 1px solid #f1e5d1;
+			    border-top: 1px solid #f1e5d1;
+			    box-shadow: none;
+			    border-radius: 0;
+			    padding: 5px;			    
+			}
+
+			.btn-link-find{
+				position: absolute;
+				top: 0;
+				right: 0;
+				background-color: $tertiary-color;
+				border-color: $tertiary-color;				
+				@include border-radius(0);
+			}
+		}
+
+		.text-box{			
+			textarea {
+			    resize: none;			   
+			    @include border-radius(0);
+			    overflow: hidden;
+			    border: none;
+			    border-bottom: 1px solid #f1e5d1;
+			    border-top: 1px solid #f1e5d1;
+			    box-shadow: none;
+			    padding: 10px 5px;
+			}
+		}
+
+		.btn-box{
+			padding: 5px 0;
+			text-align: right;
+			
+			button{
+				@include button(#ffffff);
+			}
+
+			button:hover{
+				@include button-hover();
+			}
+		}
+	}
+
+	.post{
+		float: left;
+		width: 100%;		
+		border: 1px solid #f1e5d1;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		margin-bottom: 10px;
+
+		.post-header{
+			float: left;
+			width: 100%;
+			border-bottom: 1px solid #f1e5d1;
+			padding: 10px;
+			.post-header-img{
+				float: left;
+				border: 1px solid #eee;
+				img{
+					width: 40px;
+					height: 40px;
+				}
+			}
+
+			.post-header-info{
+				float: left;
+				margin-left: 5px;
+				.post-author{
+					a{						
+						
+						color: $tertiary-color !important; 
+						cursor: pointer;						
+					}
+				}
+
+				.post-date{
+
+				}
+			}
+		}
+		.post-content{
+			float: left;
+			width: 100%;
+			padding: 10px;
+
+		}
+		.post-footer{
+			float: left;
+			width: 100%;
+
+			.post-footer-item{
+				float: left;
+				width: 33.33333%;
+				text-align: center;
+				padding: 20px;
+				background-color: $tertiary-color;
+				cursor: pointer;
+				@include component-unselectable();
+				color: $secondary-color;
+			}
+
+			.post-footer-item:hover{
+				background-color: #e08b04;
+			}
+		}
+
+		
+	}
+}

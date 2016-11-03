@@ -1,0 +1,172 @@
+@import 'app.scss';
+
+.component-uppermenu
+{
+	@include component-settings($primary-color);	
+	border-bottom: 1px solid #dddddd;
+	max-height: 56px;	
+
+	.container{
+		position: relative;
+		padding-right: 0;
+		padding-left: 0;
+		ul{
+			float: right;
+			margin-bottom: 0;				
+			li{			
+				display: inline;
+				a{
+					color: $black-color;
+					float: left;
+					text-align: right;
+					font-size: 13px;
+					margin-left: 20px;	
+					padding: 5px;
+					cursor: pointer;
+					@include component-unselectable();					
+				}
+				a:hover{
+					text-decoration: none;
+					color: $secondary-color;
+				}
+				a:focus{
+					text-decoration: none;
+				}
+				.explore{
+					background: $secondary-color;
+					color: #ffffff;
+					@include border-radius(4px);
+				}
+				.explore:hover{
+					color: #eeeeee;
+				}					
+				i{
+					margin-right: 3px;
+				}		
+			}
+		}
+
+		@media (max-width:768px){
+			ul{
+				display: none;
+			}
+		}
+
+		.navbar-toggle{
+			background-color: #ffffff;
+			border: 1px solid #eeeeee;
+			@include border-radius(0);
+			.icon-bar{
+				background-color: #dddddd;
+			}
+		}
+
+		@media (min-width:768px){
+			.navbar{
+				display: none;
+			}
+		}
+
+		.login-form{
+			position: absolute;
+			top: 39px;
+			right: 0;
+			max-width: 320px;
+			background-color: $primary-color;
+			padding: 10px 0 10px 5px;			
+			text-transform: none;
+
+			transition: all linear 0.1s;			
+
+			.login-error-report{
+				float: left;
+				width: 100%;
+				@include component-alert-danger();				
+				padding: 5px;
+				text-align: center;
+			}
+
+			div[class^="col-"]{
+				padding-left: 0;
+				padding-right: 0;
+			}			
+
+			input{
+				@include border-radius(0);
+				margin-bottom: 5px;
+			}
+
+			button{				
+				width: 100%;
+				@include button(#ffffff);				
+			}
+
+			button:hover{
+				@include button-hover();	
+			}
+			
+		}
+
+		.ng-hide{
+			right: -200px;
+		}
+
+	}
+	
+	
+}
+
+.component-logo
+{	
+	@include component-settings(#ffffff);
+	text-align: center;	
+	.logo-recipe{
+		margin-top: 40px;
+		margin-bottom: 20px;
+		img{
+			width: 100%;
+			max-width: 500px;
+		}		
+	}	
+	span{			
+		font-size: 20px;
+	    color: $secondary-color;	   
+	}
+}
+
+.component-sociallogin
+{
+	@include component-settings(#ffffff);
+	.row{		
+		.fb{
+			text-align: right;
+		}		
+		.gg{
+			text-align: left;			
+		}
+		.button-recipe{
+			button{
+				@include button($black-color);							
+				padding: 10px;				
+			}
+			button:hover{
+				@include button-hover();				
+			}
+		}
+
+		@media (max-width:768px){
+			.fb, .gg{
+				text-align: center;
+				button{
+					width: 60%;
+				}
+			}
+			.gg{
+				margin-top: 10px;
+			}
+			
+		}
+
+	}
+	
+}
